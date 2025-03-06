@@ -7,15 +7,14 @@
     <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home
-            <span class="visually-hidden">(current)</span>
+          <a class="nav-link" routerlink = "/home" routerlinkactive = "active">Home
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" routerlink = "/about" routerlinkactive = "active">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" routerlink = "/contact" routerlinkactive = "active">Contact</a>
         </li>
       </ul>
 
@@ -23,7 +22,5 @@
   </div>
 </nav>
 
-<app-home></app-home>
-<app-about></app-about>
-<app-contact></app-contact>
+<router-outlet></router-outlet>
 
