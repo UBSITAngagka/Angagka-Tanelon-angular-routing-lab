@@ -1,4 +1,17 @@
-.card {
-    max-width: 500px; 
-    margin: 20px auto; 
-  }
+div.container {
+  background-color: rgb(78, 78, 78);
+}
+
+div.container h3{
+  color: white;
+  font-family:'Patua One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+div.container p{
+  color: white;
+  font-family:'Patua One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
