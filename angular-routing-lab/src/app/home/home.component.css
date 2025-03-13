@@ -2,3 +2,59 @@
     max-width: 500px; 
     margin: 20px auto; 
   }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://img.freepik.com/premium-photo/close-up-black-flowers-dark-background_181083-255.jpg') no-repeat center center fixed; /* Replace URL with your photo URL */
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  .cards-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .card {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .card h2 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: azure;
+  }
+  .card p {
+    font-size: 1rem;
+    margin: 0;
+  }
