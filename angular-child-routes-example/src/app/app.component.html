@@ -5,22 +5,44 @@
 <a routerLink="/parent/child-one" routerLinkActive="active">Child One</a> |
 <a routerLink="/parent/child-two" routerLinkActive="active">Child Two</a>
 </nav>
+            
+            <button class="btn btn-primary" (click)="openModal()">Launch Modal</button>
 
-
-<input [(ngModel)]="name" placeholder="Enter your name">
-<p>Hello, {{ name }}</p>
-
-<input [(ngModel)]="email" placeholder="Enter your email">
-<p>Your email is: {{ email }}</p>
-
-<input [(ngModel)]="address" placeholder="Enter your address">
-<p>Address: {{ address }}</p>
-
-<input [(ngModel)]="phone" placeholder="Enter your phone number">
-<p>Your email is: {{ phone }}</p>
-
-<input [(ngModel)]="gender" placeholder="Enter your gender">
-<p>Your email is: {{ gender }}</p>
+            <!-- Modal Structure -->
+            <div
+              class="modal"
+              [class.show]="isModalVisible"
+              [style.display]="isModalVisible ? 'block' : 'none'"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Modal Title</h5>
+                    <button type="button" class="close" (click)="closeModal()">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Hello, {{ name }}</p>
+                    <input [(ngModel)]="name" placeholder="Enter your name">
+                    <p>Your email is: {{ email }}</p>
+                    <input [(ngModel)]="email" placeholder="Enter your email">
+                    <p>Address: {{ address }}</p>
+                    <input [(ngModel)]="address" placeholder="Enter your address">
+                    <p>Your email is: {{ phone }}</p>
+                    <input [(ngModel)]="phone" placeholder="Enter your phone number">
+                    <p>Your email is: {{ gender }}</p>
+                    <input [(ngModel)]="gender" placeholder="Enter your gender">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="closeModal()">
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 <hr/>
 <router-outlet></router-outlet>

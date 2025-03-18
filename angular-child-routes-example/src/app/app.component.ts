@@ -16,4 +16,14 @@ export class AppComponent {
     address = ' ';
     phone = ' ';
     gender = ' ';
+
+    isModalVisible: boolean = false;
+
+    openModal(): void {
+      this.isModalVisible = true;
+    }
+
+    closeModal(): void {
+      this.isModalVisible = false;
+    }
 }
