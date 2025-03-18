@@ -1,17 +1,22 @@
 import { TestBed } from '@angular/core/testing';
-import { CanActivateFn } from '@angular/router';
+import { Router } from '@angular/router';
+import { AdminGuard } from './admin.guard';
 
-import { adminGuard } from './admin.guard';
-
-describe('adminGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => adminGuard(...guardParameters));
+describe('AdminGuard', () => {
+  let guard: AdminGuard;
+  const mockRouter = { navigate: jasmine.createSpy('navigate') }; // Mocked Router
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [
+        AdminGuard,
+        { provide: Router, useValue: mockRouter } // Provide only the Router dependency
+      ]
+    });
+    guard = TestBed.inject(AdminGuard);
   });
 
-  it('should be created', () => {
-    expect(executeGuard).toBeTruthy();
+  it('should be instantiated', () => {
+    expect(guard).toBeTruthy();
   });
 });

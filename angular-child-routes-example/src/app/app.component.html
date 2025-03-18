@@ -1,8 +1,22 @@
-<h1>Angular Child Routes Example</h1>
+<h1>{{Page Title}}</h1>
+<p>Current Time: {{ currentTime | date: 'medium' }}</p>
+
+<img [src] = "imageUrl" [alt]="'Angular Logo'">
+<button [disabled] = "isDisabled"> Click Me</button>
 <nav>
 <a routerLink="/parent" routerLinkActive="active">Parent</a> |
 <a routerLink="/parent/child-one" routerLinkActive="active">Child One</a> |
 <a routerLink="/parent/child-two" routerLinkActive="active">Child Two</a>
 </nav>
+
+<button (click)="incremenCount()">Clicks: {{ clickCount }}</button>
+<input (input)="onInput($event)" placeholder="Type something....">
+
+<input [(ngModel)]="name" placeholder="Enter your name">
+<p>Hello, {{ name }}</p>
+
+<input [(ngModel)]="email" placeholder="Enter your email">
+<p>Your email is: {{ email }}</p>
+
 <hr/>
 <router-outlet></router-outlet>
